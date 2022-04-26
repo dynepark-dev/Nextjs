@@ -1,0 +1,41 @@
+{
+  "React Component boilerplate": {
+    "prefix": "rfc",
+    "body": [
+      "import styles from '../styles/$TM_FILENAME_BASE.module.scss'",
+      "",
+      "export default function $TM_FILENAME_BASE() {",
+      "  return (",
+      "    <div className={styles.$TM_FILENAME_BASE}>",
+      "      <div className={styles.wrapper}> ${1:$TM_FILENAME_BASE} </div>",
+      "    </div>",
+      "  )",
+      "}"
+    ],
+    "description": "boilerplate for React Component"
+  },
+  "Scss boilerplate": {
+    "prefix": "scs",
+    "body": [
+      "@import './variables.scss';",
+      "",
+      ".$TM_FILENAME_BASE ${1}{",
+      "  background-color: #fff;",
+      "  .wrapper{",
+      "    background-color: #fff; ${2}",
+      "  }",
+      "}"
+    ],
+    "description": "boilerplate for Scss"
+  },
+  "Flex Center": {
+    "prefix": "dfc",
+    "body": [
+      "display: flex;",
+      "justify-content: center;",
+      "align-items: center;",
+      "${1}"
+    ],
+    "description": "centers it"
+  }
+}

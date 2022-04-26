@@ -1,0 +1,12 @@
+@import "./variables.scss";
+
+.Footer {
+  width: 100%;
+  background-color: $bg_lightgrey;
+  .wrapper {
+    max-width: $max_width;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+}
