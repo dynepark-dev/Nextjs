@@ -2,30 +2,25 @@ import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useState } from "react";
-import useClickOutside from "../hooks/useClickOutside";
-import styles from "../styles/CardKakao.module.scss";
+import styles from "../styles/CardAll.module.scss";
 import EllipsisPopup from "./EllipsisPopup";
 
-export default function CardKakao({ webtoon }: any) {
+interface ICardAll {
+  webtoon: any;
+}
+
+export default function CardAll({ webtoon }: ICardAll) {
   const [show, setShow] = useState(false);
 
-  const domNode: any = useClickOutside(() => {
-    setShow(false);
-  });
-
   return (
-    <div title={webtoon.title} className={styles.CardKakao}>
+    <div className={styles.CardAll}>
       <div className={styles.image}>
-        <Image src={"/image/sample_kakao.webp"} width={248} height={520} />
+        <Image src={"/image/sample_kp.png"} width={180} height={180} />
       </div>
       <div className={styles.content}>
         <div className={styles.top}>
-          <div className={styles.new}>new</div>
-          <div
-            className={styles.ellipsis}
-            onClick={() => setShow((prev) => !prev)}
-            ref={domNode}
-          >
+          <div className={styles.genre}>Genre</div>
+          <div className={styles.ellipsis} onClick={() => setShow(!show)}>
             <FontAwesomeIcon icon={faEllipsisV} id={styles.selected} />
             <div className={styles.popup}>{show && <EllipsisPopup />}</div>
           </div>

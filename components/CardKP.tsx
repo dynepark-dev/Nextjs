@@ -1,15 +1,17 @@
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import { useState } from "react";
+import useClickOutside from "../hooks/useClickOutside";
 import styles from "../styles/CardKP.module.scss";
+import EllipsisPopup from "./EllipsisPopup";
 
-interface ICardKP {
-  title: string;
-  episode?: string;
-  genre?: string[];
-}
+export default function CardKP({ webtoon }: any) {
+  const [show, setShow] = useState(false);
+  const domNode: any = useClickOutside(() => {
+    setShow(false);
+  });
 
-export default function CardKP({ episode, title }: ICardKP) {
   return (
     <div className={styles.CardKP}>
       <div className={styles.image}>
@@ -17,18 +19,21 @@ export default function CardKP({ episode, title }: ICardKP) {
       </div>
       <div className={styles.content}>
         <div className={styles.top}>
-          <div className={styles.orange}>New</div>
-          <FontAwesomeIcon
-            icon={faEllipsisV}
+          <div className={styles.new}>new</div>
+          <div
             className={styles.ellipsis}
-            id={styles.selected}
-          />
+            onClick={() => setShow((prev) => !prev)}
+            ref={domNode}
+          >
+            <FontAwesomeIcon icon={faEllipsisV} id={styles.selected} />
+            <div className={styles.popup}>{show && <EllipsisPopup />}</div>
+          </div>
         </div>
-        <div className={styles.title} title={title}>
-          {title}
+        <div className={styles.title} title={webtoon.title}>
+          {webtoon.title}
         </div>
-        <div className={styles.episode} title={episode}>
-          {episode}
+        <div className={styles.episode} title={webtoon.episode}>
+          {webtoon.episode}
         </div>
       </div>
     </div>

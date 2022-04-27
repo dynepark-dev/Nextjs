@@ -9,10 +9,10 @@ export default function useClickOutside(handler) {
         handler();
       }
     };
-    document.addEventListener("mousedown", xhandler);
+    document.addEventListener("click", xhandler);
 
     return () => {
-      document.removeEventListener("mousedown", xhandler);
+      document.removeEventListener("click", xhandler);
     };
   });
 

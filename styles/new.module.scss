@@ -8,7 +8,6 @@
     margin: 2em auto;
     border-radius: 2em;
     max-width: 1082px;
-    // max-width: $max_width;
     background-color: $bg_white;
     .singlePlatform {
       margin: auto;
@@ -34,6 +33,7 @@
         justify-content: center;
         background: none;
         .webtoon {
+          cursor: pointer;
           position: relative;
           > :nth-child(2) {
             position: absolute;

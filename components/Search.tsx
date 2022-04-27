@@ -20,19 +20,19 @@ export default function Search() {
         <h2>QUICK LINKS</h2>
         <ul>
           <li>
-            <Link href={"/"}>Visiting a Webtoon Moa FAW</Link>
+            <Link href="/">Visiting a Webtoon Moa FAW</Link>
           </li>
           <li>
-            <Link href={"/"}>Visiting a Webtoon Moa FAW</Link>
+            <Link href="/">Visiting a Webtoon Moa FAW</Link>
           </li>
           <li>
-            <Link href={"/"}>Visiting a Webtoon Moa FAW</Link>
+            <Link href="/">Visiting a Webtoon Moa FAW</Link>
           </li>
           <li>
-            <Link href={"/"}>Visiting a Webtoon Moa FAW</Link>
+            <Link href="/">Visiting a Webtoon Moa FAW</Link>
           </li>
           <li>
-            <Link href={"/"}>Visiting a Webtoon Moa FAW</Link>
+            <Link href="/">Visiting a Webtoon Moa FAW</Link>
           </li>
         </ul>
       </div>

@@ -88,6 +88,7 @@ export default function OfficialLinks() {
         {platformsArray.map((i) => {
           return (
             <div
+              key={i.platform}
               title={i.platform}
               className={styles.platform}
               style={{ background: i.background }}

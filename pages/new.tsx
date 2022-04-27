@@ -50,14 +50,8 @@ export default function webtoons() {
       genre: ["로맨스", "코메디"],
     },
   ];
-  const [popup, setPopup] = useState("");
   const [selected, setSelected] = useState<number>(0);
   const list = ["Naver", "Kakao", "Kakaopage", "etc"];
-
-  const domNode: any = useClickoutside(() => {
-    setPopup("");
-  });
-
   return (
     <div className={styles.new}>
       <div className={styles.wrapper}>
@@ -67,20 +61,10 @@ export default function webtoons() {
           <h2>{list[selected]} Webtoons</h2>
           {selected === 0 && (
             <div className={styles.webtoons}>
-              {webtoons.map((i) => {
+              {webtoons.map((webtoon) => {
                 return (
-                  <div
-                    className={styles.webtoon}
-                    key={i.title}
-                    onClick={() => setPopup(i.title)}
-                    ref={domNode}
-                  >
-                    <CardNaver
-                      title={i.title}
-                      episode={i.episode}
-                      genre={i.genre}
-                    />
-                    {popup === i.title && <EllipsisPopup />}
+                  <div className={styles.webtoon} key={webtoon.title}>
+                    <CardNaver webtoon={webtoon} />
                   </div>
                 );
               })}
@@ -88,20 +72,10 @@ export default function webtoons() {
           )}
           {selected === 1 && (
             <div className={styles.webtoons}>
-              {webtoons.map((i) => {
+              {webtoons.map((webtoon) => {
                 return (
-                  <div
-                    className={styles.webtoon}
-                    key={i.title}
-                    onClick={() => setPopup(i.title)}
-                    ref={domNode}
-                  >
-                    <CardKakao
-                      title={i.title}
-                      episode={i.episode}
-                      genre={i.genre}
-                    />
-                    {popup === i.title && <EllipsisPopup />}
+                  <div className={styles.webtoon} key={webtoon.title}>
+                    <CardKakao webtoon={webtoon} />
                   </div>
                 );
               })}
@@ -109,20 +83,10 @@ export default function webtoons() {
           )}
           {selected === 2 && (
             <div className={styles.webtoons}>
-              {webtoons.map((i) => {
+              {webtoons.map((webtoon) => {
                 return (
-                  <div
-                    className={styles.webtoon}
-                    key={i.title}
-                    onClick={() => setPopup(i.title)}
-                    ref={domNode}
-                  >
-                    <CardKP
-                      title={i.title}
-                      episode={i.episode}
-                      genre={i.genre}
-                    />
-                    {popup === i.title && <EllipsisPopup />}
+                  <div className={styles.webtoon} key={webtoon.title}>
+                    <CardKP webtoon={webtoon} />
                   </div>
                 );
               })}

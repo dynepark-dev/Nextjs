@@ -4,45 +4,51 @@ $pd_card: 2em;
 $wd_image: 5.25em;
 
 .CardNaver {
-  padding: $pd_card $pd_card/4 $pd_card * 3;
+  padding: $pd_card/2;
   cursor: pointer;
   position: relative;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
   box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
   background-color: $bg_white;
   border-radius: 1.25em;
-  &:hover > .content .top .ellipsis {
-    opacity: 1;
-  }
   .image {
     margin: auto;
     overflow: hidden;
-    background-color: red;
     border-radius: 1em;
     width: $wd_image * 2;
     height: 180px;
     object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .content {
+    max-width: 180px;
     width: 100%;
-    padding: 1.25em;
-    position: absolute;
-    bottom: 0;
-
-    z-index: 1;
+    padding: 0.25em;
     .top {
-      padding-top: 2em;
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      .orange {
-        font-size: 0.75em;
+      align-items: center;
+      .new {
+        font-size: 1em;
         color: $tx_orange;
       }
       .ellipsis {
+        position: relative;
+        z-index: 100;
         font-size: 0.75em;
-        padding: 0.25em 0.5em;
-        color: $tx_black;
-        opacity: 0;
+        padding: 0.5em 0.25em 0.5em 2em;
+        color: $tx_grey;
+        .popup {
+          padding: 1px;
+          margin: 1px;
+          position: absolute;
+          top: 30px;
+          left: 15px;
+          z-index: 100;
+        }
       }
     }
     .title {

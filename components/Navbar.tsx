@@ -16,7 +16,7 @@ export default function Navbar() {
   const navArray: INavItem[] = [
     { title: "최신", link: "/new" },
     { title: "연재", link: "/webtoons?category=ongoing" },
-    { title: "완결", link: "webtoons?category=completed" },
+    { title: "완결", link: "/webtoons?category=completed" },
     { title: "성인", link: "/webtoons?category=adult" },
     { title: "BL/GL", link: "/webtoons?category=BL/GL" },
     { title: "북마크", link: "/bookmark" },
@@ -46,8 +46,10 @@ export default function Navbar() {
         </li>
 
         <li title="WebtoonMoa">
-          <Link href={"/"}>
-            <FontAwesomeIcon icon={faW} className={styles.icon} />
+          <Link href="/">
+            <div>
+              <FontAwesomeIcon icon={faW} className={styles.icon} />
+            </div>
           </Link>
         </li>
 

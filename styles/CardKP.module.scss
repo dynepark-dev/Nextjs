@@ -12,9 +12,6 @@ $wd_card: 240px;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
   background-color: $bg_white;
   border-radius: 1.25em;
-  &:hover > .content .top .ellipsis {
-    opacity: 1;
-  }
   .image {
     width: $wd_card;
     height: $wd_card;
@@ -28,15 +25,23 @@ $wd_card: 240px;
     .top {
       display: flex;
       justify-content: space-between;
-      .orange {
-        font-size: 0.75em;
+      .new {
+        font-size: 1em;
         color: $tx_orange;
       }
       .ellipsis {
+        position: relative;
+        z-index: 100;
         font-size: 0.75em;
         padding: 0.25em 0.5em;
         color: $tx_white;
-        opacity: 0;
+        .popup {
+          padding: 1px;
+          margin: 1px;
+          position: absolute;
+          top: 30px;
+          left: -8px;
+        }
       }
     }
     .title {
