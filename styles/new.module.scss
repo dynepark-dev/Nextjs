@@ -1,0 +1,47 @@
+@import "./variables.scss";
+
+.new {
+  background-color: $bg_lightgrey;
+  padding: 1px;
+  .wrapper {
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 2em;
+    max-width: 1082px;
+    // max-width: $max_width;
+    background-color: $bg_white;
+    .singlePlatform {
+      margin: auto;
+      h1 {
+        margin: 0;
+        padding: 0 0 1em;
+        text-align: center;
+        color: $tx_black;
+        font-size: 3em;
+        font-weight: 600;
+      }
+      h2 {
+        padding: 2em 0 1em;
+        color: $tx_black;
+        font-size: 1.75em;
+        font-weight: 600;
+      }
+      .webtoons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em 0.5em;
+        justify-content: center;
+        background: none;
+        .webtoon {
+          position: relative;
+          > :nth-child(2) {
+            position: absolute;
+            bottom: -11.5rem;
+            right: -13.5rem;
+          }
+        }
+      }
+    }
+  }
+}

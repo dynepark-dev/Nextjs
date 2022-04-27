@@ -14,18 +14,17 @@ interface INavItem {
 
 export default function Navbar() {
   const navArray: INavItem[] = [
-    { title: "최신", link: "/" },
-    { title: "연재", link: "/" },
-    { title: "완결", link: "/" },
-    { title: "성인", link: "/" },
-    { title: "BL/GL", link: "/" },
-    { title: "북마크", link: "/" },
-    { title: "커뮤니티", link: "/" },
+    { title: "최신", link: "/new" },
+    { title: "연재", link: "/webtoons?category=ongoing" },
+    { title: "완결", link: "webtoons?category=completed" },
+    { title: "성인", link: "/webtoons?category=adult" },
+    { title: "BL/GL", link: "/webtoons?category=BL/GL" },
+    { title: "북마크", link: "/bookmark" },
+    { title: "커뮤니티", link: "/community" },
   ];
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  console.log(searchOpen);
   return (
     <nav className={styles.Navbar}>
       <ul className={styles.gnb}>
@@ -45,9 +44,13 @@ export default function Navbar() {
             ></span>
           </div>
         </li>
+
         <li title="WebtoonMoa">
-          <FontAwesomeIcon icon={faW} className={styles.icon} />
+          <Link href={"/"}>
+            <FontAwesomeIcon icon={faW} className={styles.icon} />
+          </Link>
         </li>
+
         {navArray.map((item) => {
           return (
             <li key={item.title} className={styles.navItem}>
@@ -55,6 +58,7 @@ export default function Navbar() {
             </li>
           );
         })}
+
         <li className={styles.search} title="Search">
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
@@ -62,46 +66,11 @@ export default function Navbar() {
             onClick={() => setSearchOpen((prev) => !prev)}
           />
         </li>
+
         <li title="Menu" id={mobileOpen ? styles.hide : ""}>
           <FontAwesomeIcon icon={faUser} className={styles.icon} />
         </li>
       </ul>
     </nav>
-  );
-}
-
-function Search() {
-  return (
-    <div className={styles.Search}>
-      <div className={styles.searchIcon}>
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </div>
-      <div className={styles.searchBar}>
-        <form>
-          <input type="text" placeholder="Search webtoonMoa.com" />
-        </form>
-      </div>
-
-      <div className={styles.quickLinks}>
-        <h2>Quick Links</h2>
-        <ul>
-          <li>
-            <Link href="#">Visiting an Apple Store FAQ</Link>
-          </li>
-          <li>
-            <Link href="#">Shop Apple Store Online</Link>
-          </li>
-          <li>
-            <Link href="#">Accessories</Link>
-          </li>
-          <li>
-            <Link href="#">AirPods</Link>
-          </li>
-          <li>
-            <Link href="#">AirTag</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
   );
 }

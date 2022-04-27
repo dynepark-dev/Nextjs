@@ -1,0 +1,57 @@
+@import "./variables.scss";
+
+$wd_btn: 10em;
+$ht_btn: 3em;
+$time: 700ms;
+
+.Toggle {
+  margin: auto;
+  position: relative;
+  height: $ht_btn;
+  .wrapper {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    background-color: $bg_lightgrey;
+    border-radius: 2em;
+    li {
+      cursor: pointer;
+      width: $wd_btn;
+      flex: 1 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5px;
+      z-index: 1;
+      height: 100%;
+      background: none;
+      transition: color $time/2 ease-in-out;
+      color: $tx_black;
+      font-weight: 600;
+      &:first-child {
+        border-radius: 2em 0 0 2em;
+      }
+      &:last-child {
+        border-radius: 0 2em 2em 0;
+      }
+    }
+    #selected {
+      color: $tx_white;
+    }
+  }
+  div {
+    transition: transform $time ease-in-out;
+    cursor: pointer;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    border-radius: 2em;
+    width: $wd_btn;
+    height: $ht_btn;
+    background-color: $tx_black;
+  }
+}
