@@ -14,13 +14,13 @@ interface INavItem {
 
 export default function Navbar() {
   const navArray: INavItem[] = [
-    { title: "최신", link: "/new" },
-    { title: "연재", link: "/webtoons?category=ongoing" },
-    { title: "완결", link: "/webtoons?category=completed" },
-    { title: "성인", link: "/webtoons?category=adult" },
+    { title: "New", link: "/new" },
+    { title: "Ongoing", link: "/webtoons?category=ongoing" },
+    { title: "Completed", link: "/webtoons?category=completed" },
+    { title: "Adult", link: "/webtoons?category=adult" },
     { title: "BL/GL", link: "/webtoons?category=BL/GL" },
-    { title: "북마크", link: "/bookmark" },
-    { title: "커뮤니티", link: "/community" },
+    { title: "My Page", link: "/my" },
+    { title: "Community", link: "/community" },
   ];
 
   const [mobileOpen, setMobileOpen] = useState(false);

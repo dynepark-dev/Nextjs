@@ -33,12 +33,12 @@ $wd_card: 160;
       }
       .ellipsis {
         position: relative;
-        z-index: 100;
         font-size: 0.75em;
         padding: 0.25em 0.5em 0.25em 2em;
         color: $tx_white;
         opacity: 1;
         .popup {
+          z-index: 1;
           padding: 1px;
           margin: 1px;
           position: absolute;
@@ -55,6 +55,7 @@ $wd_card: 160;
       font-size: 1em;
       font-weight: 600;
       color: $tx_white;
+      padding-right: 0.25em;
     }
     .episode,
     .genre {

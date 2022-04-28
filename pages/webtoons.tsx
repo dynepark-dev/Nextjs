@@ -4,6 +4,7 @@ import { useState } from "react";
 import CardAll from "../components/CardAll";
 import EllipsisPopup from "../components/EllipsisPopup";
 import Filter from "../components/Filter";
+import Seo from "../components/Seo";
 import useClickOutside from "../hooks/useClickOutside";
 import styles from "../styles/webtoons.module.scss";
 
@@ -45,6 +46,7 @@ export default function webtoons() {
 
   return (
     <div className={styles.webtoons}>
+      <Seo title={capitalize(category)} content={`Filter webtoons`} />
       <div className={styles.wrapper}>
         <h1>{capitalize(category)} Webtoons</h1>
         <Filter

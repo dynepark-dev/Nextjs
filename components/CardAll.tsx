@@ -2,16 +2,16 @@ import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useState } from "react";
+import useClickOutside from "../hooks/useClickOutside";
 import styles from "../styles/CardAll.module.scss";
 import EllipsisPopup from "./EllipsisPopup";
 
-interface ICardAll {
-  webtoon: any;
-}
-
-export default function CardAll({ webtoon }: ICardAll) {
+export default function CardAll({ webtoon }: any) {
   const [show, setShow] = useState(false);
 
+  const domNode: any = useClickOutside(() => {
+    setShow(false);
+  });
   return (
     <div className={styles.CardAll}>
       <div className={styles.image}>
@@ -20,7 +20,11 @@ export default function CardAll({ webtoon }: ICardAll) {
       <div className={styles.content}>
         <div className={styles.top}>
           <div className={styles.genre}>Genre</div>
-          <div className={styles.ellipsis} onClick={() => setShow(!show)}>
+          <div
+            className={styles.ellipsis}
+            onClick={() => setShow(!show)}
+            ref={domNode}
+          >
             <FontAwesomeIcon icon={faEllipsisV} id={styles.selected} />
             <div className={styles.popup}>{show && <EllipsisPopup />}</div>
           </div>

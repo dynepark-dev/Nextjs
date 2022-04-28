@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    color: $nav_tx_white;
+    color: $white;
     white-space: nowrap;
     .mobileMenu {
       width: 20px;
@@ -69,7 +69,7 @@
         opacity: 1;
       }
       a {
-        color: $nav_tx_white;
+        color: $white;
       }
     }
 

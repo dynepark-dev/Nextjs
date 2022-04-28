@@ -6,6 +6,7 @@ import CardNaver from "../components/CardNaver";
 import CardKP from "../components/CardKP";
 import CardKakao from "../components/CardKakao";
 import Toggle from "../components/Toggle";
+import Seo from "../components/Seo";
 
 export default function webtoons() {
   const webtoons = [
@@ -54,6 +55,7 @@ export default function webtoons() {
   const list = ["Naver", "Kakao", "Kakaopage", "etc"];
   return (
     <div className={styles.new}>
+      <Seo title="New" content="New webtoons" />;
       <div className={styles.wrapper}>
         <div className={styles.singlePlatform}>
           <h1>New Webtoons</h1>

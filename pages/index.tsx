@@ -3,11 +3,12 @@ import styles from "../styles/Home.module.scss";
 import OfficialLinks from "../components/OfficialLinks";
 import Hello from "../components/Hello";
 import Ribbon from "../components/Ribbon";
+import Faq from "../components/Faq";
 
 export default function Home() {
   return (
     <>
-      <Seo title="Home" />
+      <Seo title="Home" content="WebtoonMoa Home" />
       <div className={styles.Home}>
         <Ribbon
           line1="모든 웹툰은 공식 플랫폼으로 연결되어 있습니다."
@@ -17,6 +18,7 @@ export default function Home() {
         <div className={styles.wrapper}>
           <Hello />
           <OfficialLinks />
+          <Faq />
         </div>
       </div>
     </>
