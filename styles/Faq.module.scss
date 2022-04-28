@@ -17,14 +17,14 @@ $speed: 800ms;
       padding: 0;
       list-style: none;
       #show {
-        max-height: 72px;
+        max-height: 240px;
       }
       .accordionItem {
         display: inline-block;
         width: 100%;
         border-bottom: 1px solid $bd_grey;
         overflow: hidden;
-        max-height: 240px;
+        max-height: 72px;
         transition: max-height $speed;
         .question {
           display: flex;

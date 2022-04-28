@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 $pd_card: 2em;
-$wd_card: 160;
+$wd_card: 160px;
 
 .CardAll {
   width: $wd_card;
@@ -20,7 +20,7 @@ $wd_card: 160;
     width: 100%;
     padding: 0 0 0.25em 0.5em;
     position: absolute;
-    bottom: 2px;
+    bottom: 0px;
     background-color: $nav_bg_black;
     .top {
       width: 100%;
