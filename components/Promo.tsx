@@ -1,11 +1,7 @@
-import {
-  faCirclePause,
-  faCirclePlay,
-} from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/Promo.module.scss";
+import PlayButton from "./PlayButton";
 
 export default function Promo() {
   let rec = [
@@ -76,13 +72,7 @@ export default function Promo() {
           </ul>
         </div>
         <div className={styles.content}>
-          <div className={styles.playPause} onClick={() => setPlay(!play)}>
-            {play ? (
-              <FontAwesomeIcon icon={faCirclePause} className={styles.stop} />
-            ) : (
-              <FontAwesomeIcon icon={faCirclePlay} className={styles.play} />
-            )}
-          </div>
+          <PlayButton play={play} setPlay={setPlay} />
           <div
             className={styles.webtoons}
             style={{ transform: `translate(${transformStyle}px)` }}

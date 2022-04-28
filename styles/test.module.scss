@@ -1,0 +1,8 @@
+@import "./variables.scss";
+
+.test {
+  background-color: #fff;
+  #paused {
+    animation-play-state: paused;
+  }
+}

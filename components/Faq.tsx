@@ -1,4 +1,4 @@
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import styles from "../styles/Faq.module.scss";
@@ -57,9 +57,9 @@ function AccordionItem({ question, answer }: IQna) {
       <div className={styles.question} onClick={() => setShow((prev) => !prev)}>
         <h3>{question}</h3>
         <FontAwesomeIcon
-          icon={faPlus}
-          className={styles.plus}
-          id={show ? styles.rotate : ""}
+          icon={faChevronDown}
+          className={styles.chevron}
+          id={show ? styles.flip : ""}
         />
       </div>
       <div className={styles.answer}>{answer}</div>
