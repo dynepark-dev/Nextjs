@@ -1,0 +1,43 @@
+@import "./variables.scss";
+
+.Ribbon {
+  width: 100%;
+  background-color: $bg_white;
+  overflow: hidden;
+  .wrapper {
+    background-color: $bg_blue;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 12px;
+    animation: moveDown 1s, animation_bg 1s 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    .link {
+      margin-left: 8px;
+      animation: toBlue 1s 2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animation_bg {
+  100% {
+    background-color: $bg_lightgrey;
+    color: $tx_black;
+  }
+}
+@keyframes toBlue {
+  100% {
+    color: $tx_blue;
+  }
+}

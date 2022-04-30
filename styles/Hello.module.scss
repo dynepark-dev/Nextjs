@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+.Hello {
+  background-color: $bg_white;
+  .wrapper {
+    max-width: $max-width;
+    padding: 2rem;
+    margin: auto;
+    color: $tx_black;
+    text-align: center;
+    .headline {
+      margin: 0;
+      font-size: 3.5em;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+    .subhead {
+      margin: 0.25em 0 0 0;
+      font-size: 1.75em;
+      font-weight: 400;
+    }
+    .link {
+      display: inline-block;
+      font-size: 1.25em;
+      margin: 0.5em 0;
+      color: $tx_blue;
+      a:hover {
+        text-decoration: underline;
+      }
+      ::after {
+        content: " ›";
+      }
+      :nth-child(2) {
+        margin-left: 35px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .Hello {
+    font-size: 12px;
+  }
+}

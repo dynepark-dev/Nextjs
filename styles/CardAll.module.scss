@@ -1,0 +1,70 @@
+@import "./variables.scss";
+
+$pd_card: 2em;
+$wd_card: 160px;
+
+.CardAll {
+  width: $wd_card;
+  height: $wd_card;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+  background-color: $bg_white;
+  border-radius: 1.25em;
+  .image {
+    width: $wd_card;
+    height: $wd_card;
+  }
+  .content {
+    width: 100%;
+    padding: 0 0 0.25em 0.5em;
+    position: absolute;
+    bottom: 0px;
+    background-color: $nav_bg_black;
+    .top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .genre {
+        font-size: 0.75em;
+        color: $tx_orange;
+      }
+      .ellipsis {
+        position: relative;
+        font-size: 0.75em;
+        padding: 0.25em 0.5em 0.25em 2em;
+        color: $tx_white;
+        opacity: 1;
+        .popup {
+          z-index: 1;
+          padding: 1px;
+          margin: 1px;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+        }
+      }
+    }
+    .title {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 1em;
+      font-weight: 600;
+      color: $tx_white;
+      padding-right: 0.25em;
+    }
+    .episode,
+    .genre {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $tx_grey;
+      font-size: 0.75em;
+    }
+  }
+}

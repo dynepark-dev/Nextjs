@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.OfficialLinks {
+  max-width: $max_width;
+  margin: 1.25em auto;
+  .text {
+    padding: 1.25em 0.875em;
+    h2 {
+      color: $tx_black;
+      display: inline;
+      font-size: 1.75em;
+      font-weight: 600;
+    }
+    span {
+      color: $tx_grey;
+      font-size: 1.75em;
+      font-weight: 600;
+    }
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    .platform {
+      cursor: pointer;
+      .image_wrapper {
+        width: 50%;
+        margin: 6rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+      }
+    }
+  }
+}

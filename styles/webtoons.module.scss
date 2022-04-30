@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+.webtoons {
+  background-color: $bg_lightgrey;
+  padding: 1px;
+  .wrapper {
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 2em;
+    max-width: 1082px;
+    background-color: $bg_white;
+    margin: auto;
+    h1 {
+      margin: 0;
+      padding: 0 0 1em;
+      text-align: center;
+      color: $tx_black;
+      font-size: 3em;
+      font-weight: 600;
+    }
+    .webtoonlist {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em 0.5em;
+      background: none;
+      .webtoon {
+        cursor: pointer;
+        position: relative;
+      }
+    }
+  }
+}
