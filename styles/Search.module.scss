@@ -1,0 +1,74 @@
+@import "./variables.scss";
+
+.Search {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  width: 50%;
+  max-width: 682px;
+  margin: auto;
+  z-index: 100;
+  .searchbar {
+    background-color: $nav_bg_black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .searchIcon,
+    .closeIcon {
+      height: 1rem;
+      padding: 0.75em;
+      color: $tx_grey;
+    }
+    .closeIcon {
+      cursor: pointer;
+    }
+    form {
+      flex: 1;
+      input {
+        width: 100%;
+        height: $nav_height;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font-size: 1rem;
+      }
+    }
+  }
+  .quickLinks {
+    background-color: $white;
+    padding: 1rem 0.5rem;
+    border-radius: 0 0 16px 16px;
+    h2 {
+      cursor: default;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: #6e6e73;
+      margin: 0.5rem 2rem 0;
+      padding: 0;
+      font-weight: 500;
+    }
+    ul {
+      list-style: none;
+      margin-top: 0.75rem;
+      padding: 0;
+      li {
+        width: 100%;
+        margin: 0.25rem;
+        a {
+          display: inline-block;
+          width: 100%;
+          padding: 0.25rem 3rem;
+          font-size: 14px;
+          color: $tx_black;
+          background-color: #fff;
+          &:hover {
+            background: $bg_lightgrey;
+            color: $tx_blue;
+          }
+        }
+      }
+    }
+  }
+}

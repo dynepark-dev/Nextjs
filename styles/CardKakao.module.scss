@@ -1,0 +1,67 @@
+@import "./variables.scss";
+
+.CardKakao {
+  cursor: pointer;
+  width: 248px;
+  height: 520px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+  background-color: #ffffff00;
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    background-color: $nav_bg_black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .top {
+      padding-left: 0.5em;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .new {
+        font-size: 1em;
+        color: $tx_orange;
+      }
+      .ellipsis {
+        position: relative;
+        z-index: 100;
+        font-size: 0.75em;
+        padding: 0.5em 1em 0.5em 2em;
+        color: $tx_white;
+        .popup {
+          padding: 1px;
+          margin: 1px;
+          position: absolute;
+          top: 30px;
+          left: 15px;
+        }
+      }
+    }
+    .title {
+      padding: 0 0.5em 0.5em;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 1em;
+      font-weight: 600;
+      color: $tx_white;
+    }
+    .episode,
+    .genre {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $tx_grey;
+      font-size: 0.75em;
+    }
+  }
+}

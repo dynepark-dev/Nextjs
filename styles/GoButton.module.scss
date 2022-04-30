@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+.GoButton {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 300ms;
+  }
+  #show {
+    opacity: 1;
+  }
+  #hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #plus {
+    transform: rotate(45deg);
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    transition: transform 200ms, background-color 200ms;
+    margin: 2px 0 0 0;
+    color: $tx_white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: $nav_bg_black;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+}

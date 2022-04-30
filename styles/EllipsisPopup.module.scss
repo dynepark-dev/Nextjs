@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+.EllipsisPopup {
+  min-width: 20em;
+  margin: 0;
+  padding: 0.5rem 0;
+  z-index: 10;
+  background-color: $bg_grey;
+  color: $tx_white;
+  list-style: none;
+  font-size: 0.75rem;
+  li {
+    height: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 12px 0 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    &:hover {
+      background-color: #505050;
+    }
+    span {
+      padding-left: 1rem;
+    }
+  }
+  hr {
+    border: none;
+    border-bottom: 1px solid #5a5a5a;
+  }
+}

@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+$speed: 800ms;
+
+.Faq {
+  background-color: $bg_lightgrey;
+  padding: 2rem;
+  .wrapper {
+    max-width: $max_width;
+    margin: auto;
+    h2 {
+      margin: 0 auto 3rem;
+      font-size: 3.5rem;
+    }
+    .accordion {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      #show {
+        max-height: 240px;
+      }
+      .accordionItem {
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid $bd_grey;
+        overflow: hidden;
+        max-height: 72px;
+        transition: max-height $speed;
+        .question {
+          display: flex;
+          cursor: pointer;
+          color: $tx_black;
+          justify-content: space-between;
+          padding: 1.25rem 0;
+          &:hover {
+            color: $tx_blue;
+          }
+          h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+          }
+          .chevron {
+            cursor: pointer;
+            font-size: 1.25rem;
+            background: none;
+            border: none;
+            transition: transform $speed/2;
+          }
+          #flip {
+            transform: rotateX(180deg);
+          }
+        }
+        .answer {
+          font-size: 1.125rem;
+          padding: 0 3rem 1rem 0;
+          color: $tx_grey;
+          font-weight: 500;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
