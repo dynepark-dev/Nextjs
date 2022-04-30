@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "../styles/Navbar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faW } from "@fortawesome/free-solid-svg-icons";

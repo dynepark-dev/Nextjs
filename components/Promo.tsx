@@ -30,26 +30,17 @@ export default function Promo() {
   const [play, setPlay] = useState(true);
   const [center, setCenter] = useState(1);
 
-  const slideRef: any = useRef();
+  const slideRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCenter((prev) => prev + 1);
       addToEnd(center - 1);
-    }, 4000);
+    }, 3000);
 
     !play && clearTimeout(timeout);
 
-    const hover = slideRef?.current?.addEventListener("mouseover", () => {
-      setPlay(false);
-    });
-
-    const leave = slideRef?.current?.addEventListener("mouseout", () => {
-      setPlay(true);
-    });
-
     return () => {
-      removeEventListener(hover, leave);
       clearTimeout(timeout);
     };
   }, [play, center]);
@@ -75,6 +66,8 @@ export default function Promo() {
           <PlayButton play={play} setPlay={setPlay} />
           <div
             className={styles.webtoons}
+            onMouseOver={() => setPlay(false)}
+            onMouseOut={() => setPlay(true)}
             style={{ transform: `translate(${transformStyle}px)` }}
             ref={slideRef}
           >

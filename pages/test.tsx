@@ -9,12 +9,12 @@ export default function test() {
   const [play, setPlay] = useState(true);
   return (
     <div className={styles.test}>
-      {/* <Promo /> */}
-      <div id={styles.paused}>
+      <Promo />
+      {/* <div id={styles.paused}>
         <PromoGallery play={play} />
         <PromoGallery play={play} />
         <PlayButton play={play} setPlay={setPlay} />
-      </div>
+      </div> */}
     </div>
   );
 }
